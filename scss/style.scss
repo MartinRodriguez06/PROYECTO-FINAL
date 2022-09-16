@@ -6,135 +6,118 @@ body{
     background-image: linear-gradient(to bottom, rgb(213, 209, 209), rgb(215, 211, 211) );
 }
 
-.container{
-    @extend %flex;
-    border: 2px solid black;
-    background-color: nth($colores, 4);
 
-    header{
-        grid-area: header;
-    
-    }
-
-    .nav-item{
-        display: inline-block;
-        @include mar-pad(9px, 9px);
-        border: 2px solid rgb(37, 34, 34);
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: large;
-        border-radius: 20px;
-        font-weight: bold;
-    }
-
-    .nav-item:hover{
-        background-color: nth($colores, 5);
-        transform: scale(0.9);
-        box-shadow: 2px 2px 10px black;
-    }
-    
-}
 
 
 .contenedor{
     height: 100vh;
     display: grid;
 
-    grid-template-columns:0.4fr 1fr;
-    grid-template-rows:0.3fr 1fr 0.3fr 0.2fr;
+    grid-template-columns:0.3fr 1fr;
+    grid-template-rows:0.4fr 1fr 0.5fr 0.3fr;
 
     grid-template-areas: 
     "header header"
     "main main"
-    "section-uno section-uno"
+    "section-uno section-dos"
     "footer footer";
 
-    main{
-        grid-area: main;
-    }
 
-    .aclaracion{
-        background-color: nth($colores, 3);
-       @extend %flex;
-        font-size: 1.2rem;
-        border: 1px solid black;
-        @include mar-pad(2px, 2px);
-    }
 
-    .sugerencia{
-        background-color: nth($colores, 3);
-        @extend %flex;
-        font-size: 1rem;
-        border: 1px solid black;
-        @include mar-pad(5px, 4px);
+    header{
+        grid-area: header;
         
     }
 
-    .card{
-        @include mar-pad(10px, 5px);
-        display: inline-block;
-        border: 4px solid black;
-       
-    }
-    .card:hover{
-        transform: scale(0.9);
-        box-shadow: 2px 2px 10px black;
-    }
-    
-
-}
-
-.section-uno{
-    grid-area: section;
-    @extend %flex;
-    background-color: nth($colores, 6);
-
-    .img-libros{
-        width: 20%;
-    }
-}
-
-footer{
-    grid-area: footer;
-        text-align: center;
-        @include mar-pad(4px, 1px);
-        border: 3px solid black;
+    .container{
+        @extend %flex;
+        border: 2px solid black;
         background-color: nth($colores, 4);
-}
-
-@media screen and (min-width:600px){
-    .contenedor{
-        height: 100vh;
-        display: grid;
     
-        grid-template-areas: 
-        "header"
-        "header"
-        "main"
-        "main"
-        "section-uno"
-        "section-uno"
-        "footer"
-        "footer";
-
-        justify-items: center;
-    }
-}
-
-@media screen and (min-width:1024px){
-    .contenedor{
-        height: 100vh;
-        display: grid;
+        header{
+            grid-area: header;
+        
+        }
     
-        grid-template-areas: 
-        "header header"
-        "main main"
-        "section-uno section-uno"
-        "footer footer";
-
-        justify-items: center;
-        align-items: center;
+        .nav-item{
+            display: inline-block;
+            @include mar-pad(9px, 9px);
+            border: 2px solid rgb(37, 34, 34);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+    
+        .nav-item:hover{
+            background-color: nth($colores, 5);
+            transform: scale(0.9);
+            box-shadow: 2px 2px 10px black;
+        }
+        
     }
+    
+    main{
+        grid-area: main;
+    }
+    .destacable{
+        @extend %flex;
+        @include mar-pad(4px, 3px);
+        border: 2px solid black;
+        background-color: nth($colores, 9);
+
+        .aclaracion{
+            display: inline-block;
+            background-color: nth($colores, 3);
+            font-size: 1.2rem;
+            border: 1px solid black;
+            @include mar-pad(2px, 2px);
+        }
+
+
+    }
+
+    .section-uno{
+        @include mar-pad(3px, 2px);
+        background-color: nth($colores, 8);
+        grid-area: section-uno;
+        border: 2px solid black;
+
+        p{
+            font-size: 1.5rem;
+            font-family: Georgia, 'Times New Roman', Times, serif
+        }
+    }
+
+    .section-dos{
+        @include mar-pad(3px, 2px);
+        background-color: nth($colores, 9);
+        grid-area: section-dos;
+        border: 2px solid black;
+
+        .quienes-somos{
+            font-size: 2rem;
+            font-style: oblique;
+        }
+
+        p{
+            font-size: 1.1rem;
+            font-style: oblique;
+        }
+    }
+
+    footer{
+        grid-area: footer;
+       @extend %flex;
+       @include mar-pad(4px, 3px);
+       background-color: nth($colores, 3);
+       border: 2px solid black;
+    }
+
+    
+    
 }
+
 
 
 
