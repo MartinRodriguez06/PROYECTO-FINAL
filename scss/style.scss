@@ -6,7 +6,44 @@ body{
     background-image: linear-gradient(to bottom, rgb(213, 209, 209), rgb(215, 211, 211) );
 }
 
+.container{
+    @extend %flex;
+    border: 2px solid black;
+    background-color: nth($colores, 4);
 
+    header{
+        grid-area: header;
+    
+    }
+
+    .nav-item{
+        display: inline-block;
+        @include mar-pad(9px, 9px);
+        border: 2px solid rgb(37, 34, 34);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: large;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+
+    .nav-item:hover{
+        background-color: nth($colores, 5);
+        transform: scale(0.9);
+        box-shadow: 2px 2px 10px black;
+    }
+    
+}
+
+.card{
+    @include mar-pad(10px, 5px);
+    display: inline-block;
+    border: 4px solid black;
+    
+  }
+  .card:hover{
+    transform: scale(0.9);
+    box-shadow: 2px 2px 10px black;
+}
 
 
 .contenedor{
@@ -17,10 +54,10 @@ body{
     grid-template-rows:0.4fr 1fr 0.5fr 0.3fr;
 
     grid-template-areas: 
-    "header header"
-    "main main"
-    "section-uno section-dos"
-    "footer footer";
+    "header header header"
+    "main main main"
+    "section-uno section-dos section-dos"
+    "footer footer footer";
 
 
 
@@ -29,33 +66,6 @@ body{
         
     }
 
-    .container{
-        @extend %flex;
-        border: 2px solid black;
-        background-color: nth($colores, 4);
-    
-        header{
-            grid-area: header;
-        
-        }
-    
-        .nav-item{
-            display: inline-block;
-            @include mar-pad(9px, 9px);
-            border: 2px solid rgb(37, 34, 34);
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: large;
-            border-radius: 20px;
-            font-weight: bold;
-        }
-    
-        .nav-item:hover{
-            background-color: nth($colores, 5);
-            transform: scale(0.9);
-            box-shadow: 2px 2px 10px black;
-        }
-        
-    }
     
     main{
         grid-area: main;
@@ -114,12 +124,12 @@ body{
        border: 2px solid black;
     }
 
-    
-    
 }
 
 
 
+
+.contenedor-libros{
 
 .busquedalibros{
     @extend %flex;
@@ -139,21 +149,21 @@ body{
     border: 2px solid black;
     @include mar-pad(2px, 2px);
  }
-
  .card{
-    @include mar-pad(10px, 5px);
-    display: inline-block;
-    border: 4px solid black;
-    
-  }
-  .card:hover{
-    transform: scale(0.9);
-    box-shadow: 2px 2px 10px black;
+    @include mar-pad(3rem, 1rem);
+ }
+
+ footer{
+   @extend %flex;
+   @include mar-pad(4px, 3px);
+   background-color: nth($colores, 3);
+   border: 2px solid black;
+}
 }
 
 
-
-    main{
+.contenedor-biblioteca{
+     main{
     .mislibros{
         @extend %flex;
         background-color: nth($colores, 4);
@@ -182,12 +192,25 @@ body{
     .input{
         @include mar-pad(4px, 3px);
     }
+    .card{
+        @include mar-pad(3rem, 1rem);
+        margin-left: 5rem;
+    }
   }
+  footer{
+    grid-area: footer;
+   @extend %flex;
+   @include mar-pad(4px, 3px);
+   background-color: nth($colores, 3);
+   border: 2px solid black;
+}
+}
   
 
 
 
-
+.contendor-contacto{
+   
 .hcontacto{
     @extend %flex;
     background-color: nth($colores, 4);
@@ -195,6 +218,7 @@ body{
     font-size: 2rem;
     border: 2px solid black;
 }
+
 
 .contactanos{
     @extend %flex;
@@ -205,7 +229,39 @@ body{
     .pcontacto{
         font-size: 1.2rem;
     }
+
+    .contacto-imagen{
+        width: 3rem;
+      
+    }
 }
+
+footer{
+    grid-area: footer;
+   @extend %flex;
+   @include mar-pad(4px, 3px);
+   background-color: nth($colores, 3);
+   border: 2px solid black;
+}
+}
+
+
+
+.contenedor-ayuda{
+   
+    
+
+
+
+    footer{
+        grid-area: footer;
+       @extend %flex;
+       @include mar-pad(4px, 3px);
+       background-color: nth($colores, 3);
+       border: 2px solid black;
+    }
+}
+
 
 
 
