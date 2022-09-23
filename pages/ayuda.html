@@ -60,14 +60,14 @@
 
     <main>
       <h1>¿En que podemos ayudarte?</h1>
-      <p>Contactanos por nuestro Gmail o cualquiera de nuestras redes escribiendonos tu pregunta/consulta y estaremos respondiendote en la brevedad. Para esto, te recomendamos que revises la opcion <a href="contacto.html">Contacto</a>, donde esta la informacion necesaria </p>
+      <p class="p-ayuda">¡¡Contactanos por nuestro Gmail o cualquiera de nuestras redes escribiendonos tu pregunta/consulta y estaremos respondiendote en la brevedad. Para esto, te recomendamos que revises la opcion <a class="link-contacto" href="contacto.html">Contacto</a> donde encontraras toda la informacion necesaria!!! </p>
 
       <h2>Dejanos tu opinion sobre nuestra web</h2>
-    
+    <div class="opiniones">
       <label for="opinion">
         ¿Que tan conforme estas con el funcionamiento de nuestra pagina?
       </label>
-      <select name="opinion" id="">
+      <select class="conformidad" name="opinion" id="">
         <option value="Muy conforme">Muy conforme</option>
         <option value="Conforme">Conforme</option>
         <option value="Poco conforme">Poco conforme</option>
@@ -75,9 +75,12 @@
         <option value="Muy desconforme">Muy desconforme</option>
       </select>
 
-      <p>Por que?</p>
-
-
+      <form>
+        <label for="iopinion">¿Por que?</label>
+        <input id="iopinion" type="text" name="opinion">
+        <input type="submit" value="Enviar" class="input">
+      </form>
+    </div>
 
     </main>
 

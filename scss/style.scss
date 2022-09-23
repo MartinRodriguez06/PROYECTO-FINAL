@@ -130,12 +130,13 @@ body{
 
 
 .contenedor-libros{
-
+    background-color: nth($colores, 8);
 .busquedalibros{
     @extend %flex;
     border: 3px solid black;
     @include mar-pad(6px, 2px);
     background-color: nth($colores, 3);
+    font-family:'Times New Roman', Times, serif;
 
     .input{
         margin: 3px;
@@ -143,7 +144,7 @@ body{
 }
 
  .catalogo{
-    background-color: nth($colores, 4);
+    background-color: nth($colores, 10);
     @extend %flex;
     font-size: 1.2rem;
     border: 2px solid black;
@@ -151,6 +152,7 @@ body{
  }
  .card{
     @include mar-pad(3rem, 1rem);
+    margin-left: 5rem;
  }
 
  footer{
@@ -163,6 +165,7 @@ body{
 
 
 .contenedor-biblioteca{
+    background-color: nth($colores, 8);
      main{
     .mislibros{
         @extend %flex;
@@ -248,9 +251,47 @@ footer{
 
 
 .contenedor-ayuda{
-   
-    
+   main{
+  h1{
+    @extend %flex;
+    background-color: nth($colores, 4);
+   @include mar-pad(4px, 2px);
+    font-size: 2rem;
+    border: 2px solid black;
+  }
 
+  .p-ayuda{
+    height: 30vh;
+    @extend %flex;
+    background-color: nth($colores, 4);
+    border: 2px solid black;
+    @include mar-pad(4px, 2px);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+    font-size: 1.1rem;
+  }
+
+  h2{
+    @extend %flex;
+    background-color: nth($colores, 4);
+   @include mar-pad(4px, 2px);
+    font-size: 2rem;
+    border: 2px solid black;
+  }
+
+  .opiniones{
+    height: 20vh;
+    @extend %flex;
+    background-color: nth($colores, 4);
+   @include mar-pad(4px, 2px);
+    font-size: 1rem;
+    border: 2px solid black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    .conformidad{
+        @include mar-pad(4px, 2px);
+    }
+  }
+  }
 
 
     footer{

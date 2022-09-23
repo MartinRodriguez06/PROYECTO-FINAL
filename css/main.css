@@ -1,4 +1,4 @@
-.container, .contenedor .destacable, .contenedor footer, .contenedor-libros .busquedalibros, .contenedor-libros .catalogo, .contenedor-libros footer, .contenedor-biblioteca main .mislibros, .contenedor-biblioteca main .titulo-lista, .contenedor-biblioteca footer, .contendor-contacto .hcontacto, .contendor-contacto .contactanos, .contendor-contacto footer, .contenedor-ayuda footer {
+.container, .contenedor .destacable, .contenedor footer, .contenedor-libros .busquedalibros, .contenedor-libros .catalogo, .contenedor-libros footer, .contenedor-biblioteca main .mislibros, .contenedor-biblioteca main .titulo-lista, .contenedor-biblioteca footer, .contendor-contacto .hcontacto, .contendor-contacto .contactanos, .contendor-contacto footer, .contenedor-ayuda main h1, .contenedor-ayuda main .p-ayuda, .contenedor-ayuda main h2, .contenedor-ayuda main .opiniones, .contenedor-ayuda footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -86,70 +86,68 @@ body {
     background-color: whitesmoke;
     border: 2px solid black; }
 
-.contenedor-libros .busquedalibros {
-  border: 3px solid black;
-  margin: 6px;
-  padding: 2px;
-  background-color: whitesmoke; }
-  .contenedor-libros .busquedalibros .input {
-    margin: 3px; }
+.contenedor-libros {
+  background-color: #c8b3b3; }
+  .contenedor-libros .busquedalibros {
+    border: 3px solid black;
+    margin: 6px;
+    padding: 2px;
+    background-color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif; }
+    .contenedor-libros .busquedalibros .input {
+      margin: 3px; }
+  .contenedor-libros .catalogo {
+    background-color: #9f8b8b;
+    font-size: 1.2rem;
+    border: 2px solid black;
+    margin: 2px;
+    padding: 2px; }
+  .contenedor-libros .card {
+    margin: 3rem;
+    padding: 1rem;
+    margin-left: 5rem; }
+  .contenedor-libros footer {
+    margin: 4px;
+    padding: 3px;
+    background-color: whitesmoke;
+    border: 2px solid black; }
 
-.contenedor-libros .catalogo {
-  background-color: white;
-  font-size: 1.2rem;
-  border: 2px solid black;
-  margin: 2px;
-  padding: 2px; }
-
-.contenedor-libros .card {
-  margin: 3rem;
-  padding: 1rem; }
-
-.contenedor-libros footer {
-  margin: 4px;
-  padding: 3px;
-  background-color: whitesmoke;
-  border: 2px solid black; }
-
-.contenedor-biblioteca main .mislibros {
-  background-color: white;
-  margin: 4px;
-  padding: 2px;
-  font-size: 2rem;
-  border: 2px solid black; }
-
-.contenedor-biblioteca main .listas {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 1.2rem;
-  border: 2px solid black;
-  margin: 5px;
-  padding: 3px;
-  background-color: whitesmoke; }
-
-.contenedor-biblioteca main .titulo-lista {
-  background-color: white;
-  font-size: 1.2rem;
-  border: 2px solid black;
-  margin: 2px;
-  padding: 2px; }
-
-.contenedor-biblioteca main .input {
-  margin: 4px;
-  padding: 3px; }
-
-.contenedor-biblioteca main .card {
-  margin: 3rem;
-  padding: 1rem;
-  margin-left: 5rem; }
-
-.contenedor-biblioteca footer {
-  grid-area: footer;
-  margin: 4px;
-  padding: 3px;
-  background-color: whitesmoke;
-  border: 2px solid black; }
+.contenedor-biblioteca {
+  background-color: #c8b3b3; }
+  .contenedor-biblioteca main .mislibros {
+    background-color: white;
+    margin: 4px;
+    padding: 2px;
+    font-size: 2rem;
+    border: 2px solid black; }
+  .contenedor-biblioteca main .listas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.2rem;
+    border: 2px solid black;
+    margin: 5px;
+    padding: 3px;
+    background-color: whitesmoke; }
+  .contenedor-biblioteca main .titulo-lista {
+    background-color: white;
+    font-size: 1.2rem;
+    border: 2px solid black;
+    margin: 2px;
+    padding: 2px; }
+  .contenedor-biblioteca main .input {
+    margin: 4px;
+    padding: 3px; }
+  .contenedor-biblioteca main .card {
+    margin: 3rem;
+    padding: 1rem;
+    margin-left: 5rem; }
+  .contenedor-biblioteca footer {
+    grid-area: footer;
+    margin: 4px;
+    padding: 3px;
+    background-color: whitesmoke;
+    border: 2px solid black; }
 
 .contendor-contacto .hcontacto {
   background-color: white;
@@ -174,6 +172,41 @@ body {
   padding: 3px;
   background-color: whitesmoke;
   border: 2px solid black; }
+
+.contenedor-ayuda main h1 {
+  background-color: white;
+  margin: 4px;
+  padding: 2px;
+  font-size: 2rem;
+  border: 2px solid black; }
+
+.contenedor-ayuda main .p-ayuda {
+  height: 30vh;
+  background-color: white;
+  border: 2px solid black;
+  margin: 4px;
+  padding: 2px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.1rem; }
+
+.contenedor-ayuda main h2 {
+  background-color: white;
+  margin: 4px;
+  padding: 2px;
+  font-size: 2rem;
+  border: 2px solid black; }
+
+.contenedor-ayuda main .opiniones {
+  height: 20vh;
+  background-color: white;
+  margin: 4px;
+  padding: 2px;
+  font-size: 1rem;
+  border: 2px solid black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+  .contenedor-ayuda main .opiniones .conformidad {
+    margin: 4px;
+    padding: 2px; }
 
 .contenedor-ayuda footer {
   grid-area: footer;
