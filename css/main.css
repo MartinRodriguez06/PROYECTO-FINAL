@@ -42,7 +42,7 @@ body {
 .contenedor {
   height: 100vh;
   display: grid;
-  grid-template-columns: 0.3fr 1fr;
+  grid-template-columns: auto auto auto;
   grid-template-rows: 0.4fr 1fr 0.5fr 0.3fr;
   grid-template-areas: "header-index header-index header-index" "main main main" "section-uno section-dos section-dos" "footer footer footer"; }
   .contenedor header {
