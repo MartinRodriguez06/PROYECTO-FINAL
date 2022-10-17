@@ -1,50 +1,109 @@
-const user = "cliente";
-const pass_cliente = "pass1234";
+class Usuario {
+    constructor(nombre, mail, contrasenia){
 
-function solicitoDatos(){
+        this.nombre = nombre;
+        this.contrasenia = contrasenia;
+        this.mail = mail;
+        this.activado = true;
+    }
 
-    let usuario = prompt("Ingrese su usuario");
-    let pass = prompt("Ingrese su contrasenia");
 
-    if (validarDatos (usuario, pass)){
-        iniciarCarrito();
+    mostrar_bienvenida(){
+
+        alert("Bienvenido "+this.nombre+ "\n"
+        +"Su email es "+this.mail + "\n"
+        +"Su estado es "+this.activado);
+    }
+}
+
+
+
+
+const nombre_usuario = "Martin";
+const pass_usuario = "1234";
+const mail_usuario = "martinrodriguez0618@gmail.com";
+
+
+let respuesta = confirm ("Desea registrarse en la pagina?");
+
+if (respuesta) {
+    pedir_datos();
+}
+
+function pedir_datos(){
+    let nombre = prompt ("Ingrese su nombre");
+    let mail = prompt ("Ingrese su email");
+    let pass = prompt ("Ingrese su pass");
+
+    if(nombre && mail && pass){
+        let validacion = validar_datos(nombre,mail);
+
+      if(validacion){
+        const usuario = new Usuario (nombre, mail, pass);
+        usuario.mostrar_bienvenida();
+      }else{
+        alert("Intenta con otros datos");
+      }
+    
+    
+    
     }else{
-        alert("Usuario y/o contrasenia ivalida");
+        alert("Tenes que completar todos los datos");
     }
 }
 
-function validarDatos(usuario,pass){
-    if (usuario === user && pass === pass_cliente){
-        return true ;
+
+function validar_datos(nombre, mail){
+
+    if(nombre === nombre_usuario){
+        alert("ya existe ese nombre de usuario");
+        return false;
+    }
+
+    return true;
+}
+
+
+
+
+
+
+
+
+let productoIngresado = confirm("Quiere agregar un producto?");
+
+const todosLosProductos = [];
+
+function agregarProducto (){
+    const nombreProducto = prompt("Ingrese el producto");
+    todosLosProductos.push(nombreProducto);
+    console.log(todosLosProductos);
+}
+
+
+function quitarProducto(){
+    const productoAquitar = prompt("Que producto queres borrar?");
+    const existeProducto = todosLosProductos.includes(productoAquitar);
+
+    if (existeProducto){
+        const indexProducto = todosLosProductos.indexOf(productoAquitar);
+        todosLosProductos.splice(indexProducto, 1);
     }else{
-        return false ;
+        alert("Ese producto no existe");
     }
 }
 
-function iniciarCarrito(){
-    let lista = "" ;
-    let finalizar_carrito = false ;
-
-    while(!finalizar_carrito){
-        let cod = prompt("Ingrese codigo de su producto");
-        let producto = obtenerProducto(cod);
-
-        if (producto){
-            console.log("Producto agregado con exito :"+producto);
-            lista += "\n"+producto;
-        }else{
-            if (cod === null){
-                finalizar_carrito = true ;
-            }else{
-                alert("Ingresar un codigo de producto valido");
-            }
-        }
-    }
-
-    if(lista != ""){
-        let resp = confirm ("Desea concretar la compra de :"+lista);
-        if (resp){
-            alert("Gracias por comprar en nuestra tienda online");
-        }
-    }
+while(productoIngresado){
+    agregarProducto();
+    productoIngresado = confirm("Quiere agregar otro producto?");
 }
+
+
+let confirmQuitar = confirm("Quiere quitar un producto?");
+
+ while (confirmQuitar){
+        quitarProducto();
+        confirmQuitar = confirm("Quiere quitar otro producto?");
+}
+
+console.log("Array quedo asi: "+ todosLosProductos);
