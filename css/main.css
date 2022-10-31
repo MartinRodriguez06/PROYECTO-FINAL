@@ -44,7 +44,10 @@ body {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: 0.4fr 1fr 0.5fr 0.3fr;
-  grid-template-areas: "header-index header-index header-index" "main main main" "section-uno section-dos section-dos" "footer footer footer"; }
+  grid-template-areas: "header-index header-index header-index"
+ "main main main"
+ "section-uno section-dos section-dos"
+ "footer footer footer"; }
   .contenedor header {
     grid-area: header-index; }
   .contenedor main {
@@ -91,22 +94,33 @@ body {
 
 @media screen and (min-width: 480px) {
   .contenedor {
-    grid-template-areas: "header-index header-index" "main main" "section-uno section-dos" "footer footer"; } }
+    grid-template-areas: "header-index header-index"
+ "main main"
+ "section-uno section-dos"
+ "footer footer"; } }
 
 @media screen and (min-width: 600px) {
   .contenedor {
-    grid-template-areas: "header-index header-index header-index" "main main main" "section-uno section-dos section-dos" "footer footer footer"; } }
+    grid-template-areas: "header-index header-index header-index"
+ "main main main"
+ "section-uno section-dos section-dos"
+ "footer footer footer"; } }
 
 @media screen and (min-width: 1024px) {
   .contenedor {
-    grid-template-areas: "header-index header-index header-index header-index" "main main main main" "section-uno section-dos section-dos section-dos" "footer footer footer footer"; } }
+    grid-template-areas: "header-index header-index header-index header-index"
+ "main main main main"
+ "section-uno section-dos section-dos section-dos"
+ "footer footer footer footer"; } }
 
 .contenedor-libros {
   background-color: #c8b3b3;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "header-libros header-libros header-libros header-libros header-libros"  "main-libros main-libros main-libros main-libros main-libros" "footer-libros footer-libros footer-libros footer-libros footer-libros"; }
+  grid-template-areas: "header-libros header-libros header-libros header-libros header-libros" 
+ "main-libros main-libros main-libros main-libros main-libros"
+ "footer-libros footer-libros footer-libros footer-libros footer-libros"; }
   .contenedor-libros header {
     grid-area: header-libros; }
   .contenedor-libros main {
@@ -139,22 +153,30 @@ body {
 
 @media screen and (min-width: 480px) {
   .contenedor-libros {
-    grid-template-areas: "header-libros header-libros"  "main-libros main-libros" "footer-libros footer-libros"; } }
+    grid-template-areas: "header-libros header-libros" 
+ "main-libros main-libros"
+ "footer-libros footer-libros"; } }
 
 @media screen and (min-width: 600px) {
   .contenedor-libros {
-    grid-template-areas: "header-libros header-libros header-libros"  "main-libros main-libros main-libros" "footer-libros footer-libros footer-libros"; } }
+    grid-template-areas: "header-libros header-libros header-libros" 
+ "main-libros main-libros main-libros"
+ "footer-libros footer-libros footer-libros"; } }
 
 @media screen and (min-width: 1024px) {
   .contenedor-libros {
-    grid-template-areas: "header-libros header-libros header-libros header-libros header-libros"  "main-libros main-libros main-libros main-libros main-libros" "footer-libros footer-libros footer-libros footer-libros footer-libros"; } }
+    grid-template-areas: "header-libros header-libros header-libros header-libros header-libros" 
+ "main-libros main-libros main-libros main-libros main-libros"
+ "footer-libros footer-libros footer-libros footer-libros footer-libros"; } }
 
 .contenedor-biblioteca {
   background-color: #c8b3b3;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "header-biblioteca header-biblioteca header-biblioteca header-biblioteca header-biblioteca" "main-biblioteca main-biblioteca main-biblioteca main-biblioteca main-biblioteca" "footer-biblioteca footer-biblioteca footer-biblioteca footer-biblioteca footer-biblioteca"; }
+  grid-template-areas: "header-biblioteca header-biblioteca header-biblioteca header-biblioteca header-biblioteca"
+ "main-biblioteca main-biblioteca main-biblioteca main-biblioteca main-biblioteca"
+ "footer-biblioteca footer-biblioteca footer-biblioteca footer-biblioteca footer-biblioteca"; }
   .contenedor-biblioteca header {
     grid-area: header-biblioteca; }
   .contenedor-biblioteca main {
@@ -193,21 +215,29 @@ body {
 
 @media screen and (min-width: 480px) {
   .contenedor-biblioteca {
-    grid-template-areas: "header-biblioteca header-biblioteca" "main-biblioteca main-biblioteca" "footer-biblioteca footer-biblioteca"; } }
+    grid-template-areas: "header-biblioteca header-biblioteca"
+ "main-biblioteca main-biblioteca"
+ "footer-biblioteca footer-biblioteca"; } }
 
 @media screen and (min-width: 600px) {
   .contenedor-biblioteca {
-    grid-template-areas: "header-biblioteca header-biblioteca header-biblioteca" "main-biblioteca main-biblioteca main-biblioteca" "footer-biblioteca footer-biblioteca footer-biblioteca"; } }
+    grid-template-areas: "header-biblioteca header-biblioteca header-biblioteca"
+ "main-biblioteca main-biblioteca main-biblioteca"
+ "footer-biblioteca footer-biblioteca footer-biblioteca"; } }
 
 @media screen and (min-width: 1024px) {
   .contenedor-biblioteca {
-    grid-template-areas: "header-biblioteca header-biblioteca header-biblioteca header-biblioteca header-biblioteca" "main-biblioteca main-biblioteca main-biblioteca main-biblioteca main-biblioteca" "footer-biblioteca footer-biblioteca footer-biblioteca footer-biblioteca footer-biblioteca"; } }
+    grid-template-areas: "header-biblioteca header-biblioteca header-biblioteca header-biblioteca header-biblioteca"
+ "main-biblioteca main-biblioteca main-biblioteca main-biblioteca main-biblioteca"
+ "footer-biblioteca footer-biblioteca footer-biblioteca footer-biblioteca footer-biblioteca"; } }
 
 .contendor-contacto {
   display: gird;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "header-contacto header-contacto header-contacto" "main-contacto main-contacto main-contacto" "footer-contacto footer-contacto footer-contacto"; }
+  grid-template-areas: "header-contacto header-contacto header-contacto"
+ "main-contacto main-contacto main-contacto"
+ "footer-contacto footer-contacto footer-contacto"; }
   .contendor-contacto header {
     grid-area: header-contacto; }
   .contendor-contacto main {
@@ -237,21 +267,29 @@ body {
 
 @media screen and (min-width: 480px) {
   .contendor-contacto {
-    grid-template-areas: "header-contacto" "main-contacto" "footer-contacto"; } }
+    grid-template-areas: "header-contacto"
+ "main-contacto"
+ "footer-contacto"; } }
 
 @media screen and (min-width: 600px) {
   .contendor-contacto {
-    grid-template-areas: "header-contacto header-contacto" "main-contacto main-contacto" "footer-contacto footer-contacto"; } }
+    grid-template-areas: "header-contacto header-contacto"
+ "main-contacto main-contacto"
+ "footer-contacto footer-contacto"; } }
 
 @media screen and (min-width: 1024px) {
   .contendor-contacto {
-    grid-template-areas: "header-contacto header-contacto header-contacto" "main-contacto main-contacto main-contacto" "footer-contacto footer-contacto footer-contacto"; } }
+    grid-template-areas: "header-contacto header-contacto header-contacto"
+ "main-contacto main-contacto main-contacto"
+ "footer-contacto footer-contacto footer-contacto"; } }
 
 .contenedor-ayuda {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "header-ayuda header-ayuda header-ayuda" "main-ayuda main-ayuda main-ayuda" "footer-ayuda footer-ayuda footer-ayuda"; }
+  grid-template-areas: "header-ayuda header-ayuda header-ayuda"
+ "main-ayuda main-ayuda main-ayuda"
+ "footer-ayuda footer-ayuda footer-ayuda"; }
   .contenedor-ayuda header {
     grid-area: header-ayuda; }
   .contenedor-ayuda main {
@@ -296,12 +334,23 @@ body {
 
 @media screen and (min-width: 480px) {
   .contenedor-ayuda {
-    grid-template-areas: "header-ayuda" "main-ayuda" "footer-ayuda"; } }
+    grid-template-areas: "header-ayuda"
+ "main-ayuda"
+ "footer-ayuda"; } }
 
 @media screen and (min-width: 600px) {
   .contenedor-ayuda {
-    grid-template-areas: "header-ayuda header-ayuda" "main-ayuda main-ayuda" "footer-ayuda footer-ayuda"; } }
+    grid-template-areas: "header-ayuda header-ayuda"
+ "main-ayuda main-ayuda"
+ "footer-ayuda footer-ayuda"; } }
 
 @media screen and (min-width: 1024px) {
   .contenedor-ayuda {
-    grid-template-areas: "header-ayuda header-ayuda header-ayuda" "main-ayuda main-ayuda main-ayuda" "footer-ayuda footer-ayuda footer-ayuda"; } }
+    grid-template-areas: "header-ayuda header-ayuda header-ayuda"
+ "main-ayuda main-ayuda main-ayuda"
+ "footer-ayuda footer-ayuda footer-ayuda"; } }
+
+
+
+
+ 
