@@ -1,7 +1,7 @@
 
 
-class Producto{
-    constructor(id, nombre, precio, img){
+class Producto {
+    constructor(id, nombre, precio, img) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -29,7 +29,7 @@ let carrito = [];
 
 //cargar al carrito desde el localStorage
 
-if(localStorage.getItem("carrito")){
+if (localStorage.getItem("carrito")) {
     carrito = JSON.parse(localStorage.getItem("carrito"));
 }
 
@@ -62,6 +62,14 @@ const mostrarProductos = () => {
         boton.addEventListener("click", () => {
             agregarAlCarrito(producto.id);
         })
+        boton.addEventListener("click", () =>{
+            Toastify({
+                text: "Producto agregado al carrito",
+                duration: 3000,
+                gravity: "bottom",
+                position:"right",
+            }).showToast();
+        })
 
     })
 }
@@ -69,17 +77,17 @@ const mostrarProductos = () => {
 
 //funcion agregar al carrito
 
-const agregarAlCarrito = (id) =>{
+const agregarAlCarrito = (id) => {
     const producto = productos.find((producto) => producto.id === id);
     const productoEnCarrito = carrito.find((producto) => producto.id === id);
-    if(productoEnCarrito){
+    if (productoEnCarrito) {
         productoEnCarrito.cantidad++;
-    }else {
+    } else {
         carrito.push(producto);
         //localStorage
         localStorage.setItem("carrito", JSON.stringify(carrito));
     }
-    
+
     calcularTotal();
 }
 
@@ -99,8 +107,8 @@ verCarrito.addEventListener("click", () => {
 //funcion para mostrar el carrito
 
 const mostrarCarrito = () => {
-    contenedorCarrito.innerHTML="";
-    carrito.forEach((producto) =>{
+    contenedorCarrito.innerHTML = "";
+    carrito.forEach((producto) => {
         const card = document.createElement("div");
         card.classList.add("col-xl-3", "col-md-6", "col-xs-12");
         card.innerHTML = ` 
@@ -118,7 +126,7 @@ const mostrarCarrito = () => {
 
         //eliminar productos del carrito
         const boton = document.getElementById(`eliminar${producto.id}`);
-        boton.addEventListener("click", () =>{
+        boton.addEventListener("click", () => {
             eliminarDelCarrito(producto.id);
         })
     })
@@ -131,7 +139,7 @@ const mostrarCarrito = () => {
 
 //funcion para eliminar producto del carrito
 
-const eliminarDelCarrito = (id) =>{
+const eliminarDelCarrito = (id) => {
     const producto = carrito.find((producto) => producto.id === id);
     const indice = carrito.indexOf(producto);
     carrito.splice(indice, 1);
@@ -151,7 +159,7 @@ vaciarCarrito.addEventListener("click", () => {
 
 //funcion para eliminar todo el carrito
 
-const eliminarTodoElCarrito = () =>{
+const eliminarTodoElCarrito = () => {
     carrito = [];
     mostrarCarrito();
 
@@ -163,12 +171,28 @@ const eliminarTodoElCarrito = () =>{
 //mostrar el total de la compra
 
 const total = document.getElementById("total");
-const calcularTotal= () =>{
-    let totalCompra = 0; 
-    carrito.forEach((producto) =>{
+const calcularTotal = () => {
+    let totalCompra = 0;
+    carrito.forEach((producto) => {
         totalCompra += producto.precio * producto.cantidad;
     })
-    total.innerHTML= `Total: $ ${totalCompra}`;
+    total.innerHTML = `Total: $ ${totalCompra}`;
 }
 
+
+const listado = document.getElementById("listado");
+const listadoPopulares = "../json/listado.json";
+
+fetch(listadoPopulares)
+.then(respuesta => respuesta.json())
+.then(datos => {
+    datos.forEach( producto =>{
+        listado.innerHTML += `
+        <h2>Nombre: ${producto.nombre}</h2>
+        <p>Precio: ${producto.precio}</p>
+        <p>ID:${producto.id}</p>
+        `
+    })
+})
+.catch(error => console.log(error))
 
